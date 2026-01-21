@@ -1,0 +1,30 @@
+﻿@using Day2.Dal.Entities
+@model Employee
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+@if (Model==null)
+{
+
+    <div class="alert alert-danger" role="alert">
+        Your Model Is Null 
+    </div>
+
+}
+else
+{
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Detalies
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model?.Id</li>
+        <li class="list-group-item">@Model?.Name</li>
+        <li class="list-group-item">@Model?.Salary</li>
+    </ul>
+</div>
+
+}
