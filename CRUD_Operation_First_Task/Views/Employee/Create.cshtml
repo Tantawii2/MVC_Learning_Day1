@@ -1,0 +1,32 @@
+﻿@using CRUD_Operation_First_Task.DAl.Entities
+
+@model Employee
+
+@{
+}
+
+<div class="card text-center">
+    <div class="card-header">
+        CRUD Operation
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Create Page</h5>
+
+    </div>
+</div>
+
+
+<form asp-action="SaveCreateData" asp-controller="Employee">
+    <div class="mb-3">
+        <label asp-for="Name" for="Name" class="form-label">Name</label>
+        <input asp-for="Name" type="text" class="form-control" id="Name">
+       
+    </div>
+    <div class="mb-3">
+        <label asp-for="Salary" for="Salary" class="form-label">Salary</label>
+        <input asp-for="Salary" type="number" class="form-control" id="Salary">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>

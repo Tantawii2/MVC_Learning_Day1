@@ -1,0 +1,33 @@
+﻿@using Day3.Dal.Entities
+@model Employee
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="card">
+    <div class="card-body">
+        <form asp-action="SaveData" asp-controller="Employee">
+            <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                @* <input name="Name" type="text" class="form-control" id="Name"> *@
+                <input asp-for="Name" type="text" class="form-control" id="Name">
+            </div>
+
+
+            <div class="mb-3">
+                <label for="Salary" class="form-label">Salary</label>
+                @* <input name="Salary" type="number" class="form-control" id="Salary"> *@
+                <input asp-for="Salary" type="number" class="form-control" id="Salary">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+

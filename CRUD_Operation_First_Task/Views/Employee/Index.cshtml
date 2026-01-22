@@ -1,0 +1,69 @@
+﻿@using CRUD_Operation_First_Task.DAl.Entities
+ @model List<Employee>
+
+
+
+@{
+}
+
+<div class="card text-center">
+	<div class="card-header">
+		CRUD Operation
+	</div>
+
+
+</div>
+<br />
+<br />
+<a class="btn btn-success mb-3" asp-controller="Employee" asp-action="Create">
+	+ Create New
+</a>
+<table class="table table-hover">
+ <thead>
+	 <tr>
+		 <td>
+			 Id
+		 </td>
+		 <td>
+			 Name
+		 </td>
+		 <td>
+			 Salary
+		 </td>
+		 <td></td>
+	 </tr>
+ </thead>
+
+ <tbody>
+
+		@foreach (var item in Model )
+		{
+			<tr>
+				<td>@item.Id</td>
+				<td>@item.Name</td>
+				<td>@item.Salary</td>
+				<td>
+					<a class="btn btn-warning" asp-controller="Employee" asp-action="Edit" asp-route-id="@item.Id">
+						<i class="bi bi-pencil-square"></i>
+					</a>
+				
+					<a class="btn btn-danger" asp-controller="Employee" asp-action="Delete" asp-route-id="@item.Id">
+						 Delete
+					</a>
+				
+					<a class="btn btn-info" asp-controller="Employee" asp-action="Details" asp-route-id="@item.Id">
+						Details
+					</a>
+
+				</td>
+
+			</tr>
+
+		}
+
+ </tbody>
+
+
+
+
+</table>
